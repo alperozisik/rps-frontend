@@ -1,0 +1,25 @@
+{
+  "name": "rps-frontend",
+  "version": "0.0.1",
+  "description": "Web frontend for RPS game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alperozisik/rps-frontend.git"
+  },
+  "keywords": [
+    "Rock",
+    "Paper",
+    "Scissors",
+    "Game"
+  ],
+  "author": "Alper Ozisik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alperozisik/rps-frontend/issues"
+  },
+  "homepage": "https://github.com/alperozisik/rps-frontend#readme"
+}
