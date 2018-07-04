@@ -19,7 +19,6 @@ registerPage.on("init", () => {
         var value = input.value;
         if (!value)
             return;
-        // alert(`registering as ${value}`);
         registerPlayer(value).then(() => {
             router.go("main");
         }).catch(err => {

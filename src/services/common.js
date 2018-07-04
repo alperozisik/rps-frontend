@@ -57,6 +57,11 @@ function request(options) {
                 }
             }
         };
+
+        xhr.onerror = evnt => {
+            reject(evnt);
+        };
+
         xhr.open(method, url, true);
 
         xhr.setRequestHeader("Authorization", "Basic " + window.btoa(`${username}:${password}`));
