@@ -1,0 +1,293 @@
+html {
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  /*centers items on the line (the x-axis by default)*/
+  align-items: center;
+  /*centers items on the cross-axis (y by default)*/
+  background-color: #EEEEEE;
+  flex-direction: column;
+}
+
+body *:not(script):not(style):not(meta):not(table):not(tr):not(td):not(th):not(tbody):not(thead) {
+  display: flex;
+}
+
+button {
+  background-color: #00A1F1;
+  text-align: center;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border: none;
+
+}
+
+input[type=text],
+button {
+  height: 20pt;
+  align-self: stretch;
+}
+
+input[type=radio] {
+  margin-right: 3pt;
+}
+
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 22pt;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 15pt;
+  font-weight: 400;
+}
+
+hr {
+  width: 100%;
+}
+
+.header {
+  background-color: white;
+  box-shadow: 0px 3px #888888;
+  align-self: stretch;
+  /*position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100vw;*/
+}
+
+.header>img {
+  max-height: 80pt;
+  max-width: 100vw;
+  object-fit: contain;
+}
+
+.page {
+  flex: 1 1 0;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 3pt;
+}
+
+.dialog {
+  min-height: 60pt;
+  min-width: 200pt;
+  background-color: white;
+  border: 3px solid black;
+  flex-direction: column;
+  padding: 10pt;
+  align-items: center;
+}
+
+#registerForm {
+  height: 160pt;
+  justify-content: space-between;
+}
+
+#mainMenu {
+  height: 130pt;
+  justify-content: space-between;
+}
+
+#newGameDialog {
+  padding: 3pt 0pt 0pt 3pt;
+}
+
+#newGameDialog>div>div {
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+#newGameDialog>div {
+  height: 240pt;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 7pt 10pt 10pt 7pt;
+  align-items: flex-start;
+}
+
+#newGameDialog h3 {
+  margin-bottom: 3pt;
+}
+
+.backButton {
+  align-self: flex-start;
+  min-height: 15pt;
+}
+
+.backButton>img {
+  height: 15pt;
+}
+
+#game {
+  overflow-y: hidden;
+}
+
+#gamePlayHistory,
+#gameList {
+  overflow-y: scroll;
+  flex-grow: 1;
+  align-self: stretch;
+  background-color: white;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 5pt;
+}
+
+
+#chooseAction {
+  flex-direction: column;
+  padding-bottom: 7pt;
+  min-height: 153px;
+  overflow-y: auto;
+}
+
+#chooseAction>div {
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.playerPossibleAction img {
+  height: 60pt;
+}
+
+
+.playerPossibleAction {
+  height: 83pt;
+  width: 65pt;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #333333;
+  box-shadow: 2px 2px #888888;
+}
+
+.playerActionlink {
+  margin: 5pt;
+}
+
+
+.gameRow {
+  min-height: max-content;
+}
+
+#chooseAction>h2 {
+  margin-bottom: 5pt;
+}
+
+.roundLog {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2pt;
+  margin-bottom: 12pt;
+  min-height: 70pt;
+}
+
+.playerActionsRow {
+  margin-left: 5pt;
+
+}
+
+.playerAction {
+  flex-direction: column;
+  align-items: center;
+  width: 32pt;
+  margin-left: 3pt;
+  margin-right: 3pt;
+}
+
+.playerActionIcon {
+  width: 24pt;
+  height: 24pt;
+  background-size: 24pt 24pt;
+  background-repeat: no-repeat;
+}
+
+.playerActionIcon-rock {
+  background-image: url('../images/rock.png');
+}
+
+.playerActionIcon-paper {
+  background-image: url('../images/paper.png');
+}
+
+.playerActionIcon-scissors {
+  background-image: url('../images/scissors.png');
+}
+
+.playerActionIcon-lizard {
+  background-image: url('../images/lizard.png');
+}
+
+.playerActionIcon-spock {
+  background-image: url('../images/spock.png');
+}
+
+.playerActionWinner {
+  color: green;
+  font-weight: bold;
+  font-size: 7pt;
+}
+
+.playerActionPlayerName {
+  font-size: 7pt;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+a.disabled {
+  cursor: not-allowed;
+}
+
+.rwd-table button {
+  width: 70pt;
+  display: inline-block;
+}
